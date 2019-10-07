@@ -35,7 +35,7 @@ window.onload = function() {
     return arr;
   };
   
-  let myQuestions = shuffle(origList);
+  let myQuestions = shuffle(origList).slice(0,2);
 
   function buildQuiz() {
     // we'll need a place to store the HTML output
@@ -46,7 +46,7 @@ window.onload = function() {
       // add this question and its answers to the output
       output.push(
         `<div class="slide">
-           <div>${questionNumber+1}</div>
+           <div>${questionNumber+1} / ${myQuestions.length}</div>
            <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
            <div class="answers"> <input type="text" name="answer${questionNumber}"> </div>
          </div>`
