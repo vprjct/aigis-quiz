@@ -2,32 +2,22 @@ window.onload = function() {
   console.log("js start");
   const myQuestions = [
     {
-      question: "Who is the strongest?",
-      answers: {
-        a: "Superman",
-        b: "The Terminator",
-        c: "Waluigi, obviously"
-      },
-      correctAnswer: "c"
+      question: "input test",
+      correctAnswer: "test"
     },
     {
-      question: "What is the best site ever created?",
-      answers: {
-        a: "SitePoint",
-        b: "Simple Steps Code",
-        c: "Trick question; they're both the best"
-      },
-      correctAnswer: "c"
+      question: "input test2",
+      correctAnswer: "test2"
     },
     {
-      question: "Where is Waldo really?",
+      question: "input test3",
       answers: {
         a: "Antarctica",
         b: "Exploring the Pacific Ocean",
         c: "Sitting in a tree",
         d: "Minding his own business, so stop asking"
       },
-      correctAnswer: "d"
+      correctAnswer: "test3"
     }
   ];
 
@@ -55,8 +45,9 @@ window.onload = function() {
       // add this question and its answers to the output
       output.push(
         `<div class="slide">
+           <div>${questionNumber+1}</div>
            <div class="question"> ${currentQuestion.question} </div>
-           <div class="answers"> ${answers.join("")} </div>
+           <div class="answers"> ${answers.join("")} <input type="text"> </div>
          </div>`
       );
     });
