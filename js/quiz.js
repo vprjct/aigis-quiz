@@ -64,6 +64,9 @@ window.onload = function() {
     // keep track of user's answers
     let numCorrect = 0;
 
+    const output = [];
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join("");
     // for each question...
     myQuestions.forEach((currentQuestion, questionNumber) => {
       // find selected answer
@@ -78,19 +81,37 @@ window.onload = function() {
 
         // color the answers green
         answerContainers[questionNumber].style.color = "lightgreen";
+        
+        output.push(
+          `<div class="slide">
+             <div>${questionNumber+1} / ${myQuestions.length}</div>
+             <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
+             <div class="answers" style="color:lightgreen"> userAnswer </div>
+           </div>`
+        );
       } else {
         // if answer is wrong or blank
         // color the answers red
         answerContainers[questionNumber].style.color = "red";
+        
+        output.push(
+          `<div class="slide">
+             <div>${questionNumber+1} / ${myQuestions.length}</div>
+             <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
+             <div class="answers" style="color:red"> userAnswer </div>
+           </div>`
+        );
       }
     });
 
+    quizContainer.style.display = "none";
     nextButton.style.display = "none";
     previousButton.style.display = "none";
     submitButton.style.display = "none";
     
     // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+//    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    resultsContainer.innerHTML = output.join("");
   }
 
   function showSlide(n) {
