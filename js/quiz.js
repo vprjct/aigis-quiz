@@ -47,7 +47,7 @@ window.onload = function() {
         `<div class="slide">
            <div>${questionNumber+1}</div>
            <div class="question"> ${currentQuestion.question} </div>
-           <div class="answers"> ${answers.join("")} <input type="text"> </div>
+           <div class="answers"> ${answers.join("")} <input type="text" name="answer${questionNumber}"> </div>
          </div>`
       );
     });
