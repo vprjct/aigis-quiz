@@ -120,15 +120,17 @@ window.onload = function() {
     currentSlide = n;
     
     if (currentSlide === 0) {
+      nextButton.style.display     = "inline-block";
       previousButton.style.display = "none";
+      submitButton.style.display   = "none";
     } else if (currentSlide === slides.length - 1) {
-      nextButton.style.display = "none";
+      nextButton.style.display     = "none";
       previousButton.style.display = "inline-block";
-      submitButton.style.display = "inline-block";
+      submitButton.style.display   = "inline-block";
     } else {
-      nextButton.style.display = "inline-block";
+      nextButton.style.display     = "inline-block";
       previousButton.style.display = "inline-block";
-      submitButton.style.display = "none";
+      submitButton.style.display   = "none";
     }
   }
 
