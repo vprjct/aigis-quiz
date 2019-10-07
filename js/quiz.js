@@ -47,7 +47,7 @@ window.onload = function() {
       output.push(
         `<div class="slide">
            <div>${questionNumber+1}</div>
-           <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.jpg"> </div>
+           <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
            <div class="answers"> <input type="text" name="answer${questionNumber}"> </div>
          </div>`
       );
