@@ -110,8 +110,8 @@ window.onload = function() {
     submitButton.style.display = "none";
     
     // show number of correct answers out of total
-//    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-    resultsContainer.innerHTML = output.join("");
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+//    resultsContainer.innerHTML = output.join("");
   }
 
   function showSlide(n) {
