@@ -65,8 +65,7 @@ window.onload = function() {
     let numCorrect = 0;
 
     const output = [];
-    // finally combine our output list into one string of HTML and put it on the page
-    quizContainer.innerHTML = output.join("");
+    
     // for each question...
     myQuestions.forEach((currentQuestion, questionNumber) => {
       // find selected answer
@@ -111,7 +110,7 @@ window.onload = function() {
     
     // show number of correct answers out of total
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-//    resultsContainer.innerHTML = output.join("");
+    resultsContainer.innerHTML = output.join("");
   }
 
   function showSlide(n) {
