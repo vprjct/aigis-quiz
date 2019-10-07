@@ -82,7 +82,7 @@ window.onload = function() {
         answerContainers[questionNumber].style.color = "lightgreen";
         
         output.push(
-          `<div class="slide">
+          `<div>
              <div>${questionNumber+1} / ${myQuestions.length}</div>
              <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
              <div class="answers" style="color:lightgreen"> userAnswer </div>
@@ -94,7 +94,7 @@ window.onload = function() {
         answerContainers[questionNumber].style.color = "red";
         
         output.push(
-          `<div class="slide">
+          `<div>
              <div>${questionNumber+1} / ${myQuestions.length}</div>
              <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
              <div class="answers" style="color:red"> userAnswer </div>
