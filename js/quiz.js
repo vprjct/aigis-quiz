@@ -2,21 +2,15 @@ window.onload = function() {
   console.log("js start");
   const myQuestions = [
     {
-      question: "input test",
+      question: "BuXKCx50",
       correctAnswer: "test"
     },
     {
-      question: "input test2",
+      question: "BuXKCx50",
       correctAnswer: "test2"
     },
     {
-      question: "input test3",
-      answers: {
-        a: "Antarctica",
-        b: "Exploring the Pacific Ocean",
-        c: "Sitting in a tree",
-        d: "Minding his own business, so stop asking"
-      },
+      question: "BuXKCx50",
       correctAnswer: "test3"
     }
   ];
@@ -27,27 +21,12 @@ window.onload = function() {
 
     // for each question...
     myQuestions.forEach((currentQuestion, questionNumber) => {
-      // we'll want to store the list of answer choices
-      const answers = [];
-
-      // and for each available answer...
-      for (letter in currentQuestion.answers) {
-        // ...add an HTML radio button
-        answers.push(
-          `<label>
-             <input type="radio" name="question${questionNumber}" value="${letter}">
-              ${letter} :
-              ${currentQuestion.answers[letter]}
-           </label>`
-        );
-      }
-
       // add this question and its answers to the output
       output.push(
         `<div class="slide">
            <div>${questionNumber+1}</div>
-           <div class="question"> ${currentQuestion.question} </div>
-           <div class="answers"> ${answers.join("")} <input type="text" name="answer${questionNumber}"> </div>
+           <div class="question"> <img src="images/${currentQuestion.question}.jpg"> </div>
+           <div class="answers"> <input type="text" name="answer${questionNumber}"> </div>
          </div>`
       );
     });
