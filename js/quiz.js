@@ -1,19 +1,41 @@
 window.onload = function() {
-  console.log("js start");
-  const myQuestions = [
+  const origList = [
     {
-      question: "BuXKCx50",
+      question: "icon_001s",
       correctAnswer: "test"
     },
     {
-      question: "BuXKCx50",
+      question: "icon_002s",
       correctAnswer: "test2"
     },
     {
-      question: "BuXKCx50",
+      question: "icon_003s",
       correctAnswer: "test3"
-    }
+    },
+    {
+      question: "icon_004s",
+      correctAnswer: "test3"
+    },
+    {
+      question: "icon_005s",
+      correctAnswer: "test3"
+    },
+    {
+      question: "icon_006s",
+      correctAnswer: "test3"
+    },
   ];
+  
+  const shuffle = ([...arr]) => {
+    let m = arr.length;
+    while (m) {
+      const i = Math.floor(Math.random() * m--);
+      [arr[m], arr[i]] = [arr[i], arr[m]];
+    }
+    return arr;
+  };
+  
+  let myQuestions = shuffle(origList);
 
   function buildQuiz() {
     // we'll need a place to store the HTML output
