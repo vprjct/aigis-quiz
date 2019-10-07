@@ -67,7 +67,7 @@ window.onload = function() {
     myQuestions.forEach((currentQuestion, questionNumber) => {
       // find selected answer
       const answerContainer = answerContainers[questionNumber];
-      const selector = `input[name=question${questionNumber}]:checked`;
+      const selector = `input[name=answer${questionNumber}]`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
       // if answer is correct
