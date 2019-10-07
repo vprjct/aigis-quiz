@@ -2,27 +2,27 @@ window.onload = function() {
   const origList = [
     {
       question: "icon_001s",
-      correctAnswer: "test"
+      correctAnswer: "立花響"
     },
     {
       question: "icon_002s",
-      correctAnswer: "test2"
+      correctAnswer: "風鳴翼"
     },
     {
       question: "icon_003s",
-      correctAnswer: "test3"
+      correctAnswer: "雪音クリス"
     },
     {
       question: "icon_004s",
-      correctAnswer: "test3"
+      correctAnswer: "マリア・カデンツァヴナ・イヴ"
     },
     {
       question: "icon_005s",
-      correctAnswer: "test3"
+      correctAnswer: "月読調"
     },
     {
       question: "icon_006s",
-      correctAnswer: "test3"
+      correctAnswer: "暁切歌"
     },
   ];
   
