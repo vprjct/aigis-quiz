@@ -18,11 +18,11 @@ window.onload = function() {
     },
     {
       question: "icon_005s",
-      correctAnswer: "月読調"
+      correctAnswer: "暁切歌"
     },
     {
       question: "icon_006s",
-      correctAnswer: "暁切歌"
+      correctAnswer: "月読調"
     },
   ];
   
@@ -85,6 +85,10 @@ window.onload = function() {
       }
     });
 
+    nextButton.style.display = "none";
+    previousButton.style.display = "none";
+    submitButton.style.display = "none";
+    
     // show number of correct answers out of total
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
   }
@@ -96,15 +100,13 @@ window.onload = function() {
     
     if (currentSlide === 0) {
       previousButton.style.display = "none";
-    } else {
-      previousButton.style.display = "inline-block";
-    }
-    
-    if (currentSlide === slides.length - 1) {
+    } else if (currentSlide === slides.length - 1) {
       nextButton.style.display = "none";
+      previousButton.style.display = "inline-block";
       submitButton.style.display = "inline-block";
     } else {
       nextButton.style.display = "inline-block";
+      previousButton.style.display = "inline-block";
       submitButton.style.display = "none";
     }
   }
