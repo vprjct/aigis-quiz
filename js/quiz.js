@@ -1,4 +1,4 @@
-(function() {
+window.onload = (function() {
   const myQuestions = [
     {
       question: "Who is the strongest?",
