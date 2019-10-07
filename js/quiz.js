@@ -1,4 +1,5 @@
-window.onload = (function() {
+window.onload = function() {
+  console.log("js start");
   const myQuestions = [
     {
       question: "Who is the strongest?",
@@ -142,4 +143,4 @@ window.onload = (function() {
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
-})();
+};
