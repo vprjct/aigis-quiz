@@ -31,7 +31,7 @@ $(window).on('load', function() {
       output.push(
         `<div class="slide">
            <div>Q. ${questionNumber+1} / ${myQuestions.length}</div>
-           <div class="question"> <img src="./iamges/${currentQuestion.icon}.png"> </div>
+           <div class="question"> <img src="./images/${currentQuestion.icon}.png"> </div>
            <div class="answers"> <input type="text" name="answer${questionNumber}"> </div>
          </div>`
       );
@@ -68,7 +68,7 @@ $(window).on('load', function() {
         output.push(
           `<div>
              <div style="color:lightgreen">Q. ${questionNumber+1}</div>
-             <div class="question"> <img src="./iamges/${currentQuestion.icon}.png"> </div>
+             <div class="question"> <img src="./images/${currentQuestion.icon}.png"> </div>
              <div class="answers" style="color:lightgreen"> 解答: ${userAnswer} / 正解: ${currentQuestion.name} </div>
            </div>`
         );
@@ -80,7 +80,7 @@ $(window).on('load', function() {
         output.push(
           `<div>
              <div style="color:red">Q. ${questionNumber+1}</div>
-             <div class="question"> <img src="./iamges/${currentQuestion.icon}.png"> </div>
+             <div class="question"> <img src="./images/${currentQuestion.icon}.png"> </div>
              <div class="answers" style="color:red"> 解答: ${userAnswer} / 正解: ${currentQuestion.name} </div>
            </div>`
         );
