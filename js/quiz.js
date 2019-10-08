@@ -93,6 +93,7 @@ $(window).on('load', function() {
     nextButton.style.display = "none";
     previousButton.style.display = "none";
     submitButton.style.display = "none";
+    retryButton.style.display = "inline-block";
     
     // show number of correct answers out of total
     output.push(`<div>正解数 : ${numCorrect} / ${myQuestions.length}</div>`);
@@ -136,6 +137,8 @@ $(window).on('load', function() {
 
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
+  const retryButton = document.getElementById("retry");
+  retryButton.style.display = "none";
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
 
