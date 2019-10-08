@@ -1,4 +1,4 @@
-window.onload = function() {
+$(window).load(function() {
   const origList = [
     {
       "icon": "icon_001s",
@@ -161,4 +161,4 @@ window.onload = function() {
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
-};
+});
