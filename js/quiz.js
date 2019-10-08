@@ -106,6 +106,10 @@ window.onload = function() {
     const quiz = document.getElementById("quiz-container");
     quiz.style.display = "none";
     
+    nextButton.style.display = "none";
+    previousButton.style.display = "none";
+    submitButton.style.display = "none";
+    
     // show number of correct answers out of total
     output.push(`<div>正解数 : ${numCorrect} / ${myQuestions.length}</div>`);
     resultsContainer.innerHTML = output.join("");
