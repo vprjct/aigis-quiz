@@ -1,30 +1,6 @@
 $(window).on('load', function() {
-  const origList = [
-    {
-      "icon": "icon_001s",
-      "name": "立花響"
-    },
-    {
-      "icon": "icon_002s",
-      "name": "風鳴翼"
-    },
-    {
-      "icon": "icon_003s",
-      "name": "雪音クリス"
-    },
-    {
-      "icon": "icon_004s",
-      "name": "マリア・カデンツァヴナ・イヴ"
-    },
-    {
-      "icon": "icon_005s",
-      "name": "暁切歌"
-    },
-    {
-      "icon": "icon_006s",
-      "name": "月読調"
-    }
-  ];
+  let json = $.getJSON("./json/data.json");
+  const origList = json.responseJSON;
   
   const shuffle = ([...arr]) => {
     let m = arr.length;
