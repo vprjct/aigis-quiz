@@ -1,6 +1,14 @@
 $(window).on('load', function() {
-  let json = $.getJSON("./json/data.json");
-  const origList = json.responseJSON;
+  origList = [];
+  $.ajax({
+    type: "GET",
+    url: "./json/data.json",
+    async: false,
+    success: function(data) {
+      origList = data;
+    }
+  });
+  console.log(origList);
   
   const shuffle = ([...arr]) => {
     let m = arr.length;
