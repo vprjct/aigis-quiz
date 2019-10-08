@@ -1,30 +1,30 @@
 window.onload = function() {
   const origList = [
     {
-      question: "icon_001s",
-      correctAnswer: "立花響"
+      "icon": "icon_001s",
+      "name": "立花響"
     },
     {
-      question: "icon_002s",
-      correctAnswer: "風鳴翼"
+      "icon": "icon_002s",
+      "name": "風鳴翼"
     },
     {
-      question: "icon_003s",
-      correctAnswer: "雪音クリス"
+      "icon": "icon_003s",
+      "name": "雪音クリス"
     },
     {
-      question: "icon_004s",
-      correctAnswer: "マリア・カデンツァヴナ・イヴ"
+      "icon": "icon_004s",
+      "name": "マリア・カデンツァヴナ・イヴ"
     },
     {
-      question: "icon_005s",
-      correctAnswer: "暁切歌"
+      "icon": "icon_005s",
+      "name": "暁切歌"
     },
     {
-      question: "icon_006s",
-      correctAnswer: "月読調"
-    },
-  ];
+      "icon": "icon_006s",
+      "name": "月読調"
+    }
+];
   
   const shuffle = ([...arr]) => {
     let m = arr.length;
@@ -47,7 +47,7 @@ window.onload = function() {
       output.push(
         `<div class="slide">
            <div>${questionNumber+1} / ${myQuestions.length}</div>
-           <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
+           <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.icon}.png"> </div>
            <div class="answers"> <input type="text" name="answer${questionNumber}"> </div>
          </div>`
       );
@@ -74,7 +74,7 @@ window.onload = function() {
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
       // if answer is correct
-      if (userAnswer === currentQuestion.correctAnswer) {
+      if (userAnswer === currentQuestion.name) {
         // add to the number of correct answers
         numCorrect++;
 
@@ -84,8 +84,8 @@ window.onload = function() {
         output.push(
           `<div>
              <div>${questionNumber+1}</div>
-             <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
-             <div class="answers" style="color:lightgreen"> 解答: ${userAnswer} / 正解: ${currentQuestion.correctAnswer} </div>
+             <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.icon}.png"> </div>
+             <div class="answers" style="color:lightgreen"> 解答: ${userAnswer} / 正解: ${currentQuestion.name} </div>
            </div>`
         );
       } else {
@@ -96,8 +96,8 @@ window.onload = function() {
         output.push(
           `<div>
              <div>${questionNumber+1}</div>
-             <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
-             <div class="answers" style="color:red"> 解答: ${userAnswer} / 正解: ${currentQuestion.correctAnswer} </div>
+             <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.icon}.png"> </div>
+             <div class="answers" style="color:red"> 解答: ${userAnswer} / 正解: ${currentQuestion.name} </div>
            </div>`
         );
       }
