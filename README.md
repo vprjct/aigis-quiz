@@ -1,3 +1,7 @@
+# 素材追加
+1. imagesにアイコンぶちこむ
+2. json/data.json にぶちこんだアイコン名＋キャラ名を既存の形式に合わせて格納
+
 # 参考(パクリ元)
 ## 大本
 https://www.webprofessional.jp/simple-javascript-quiz/
