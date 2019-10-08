@@ -19,7 +19,7 @@ $(window).on('load', function() {
     return arr;
   };
   
-  let myQuestions = shuffle(origList).slice(0,2);
+  let myQuestions = shuffle(origList).slice(0,10);
 
   function buildQuiz() {
     // we'll need a place to store the HTML output
@@ -30,7 +30,7 @@ $(window).on('load', function() {
       // add this question and its answers to the output
       output.push(
         `<div class="slide">
-           <div>${questionNumber+1} / ${myQuestions.length}</div>
+           <div>Q. ${questionNumber+1} / ${myQuestions.length}</div>
            <div class="question"> <img src="./iamges/${currentQuestion.icon}.png"> </div>
            <div class="answers"> <input type="text" name="answer${questionNumber}"> </div>
          </div>`
@@ -67,7 +67,7 @@ $(window).on('load', function() {
         
         output.push(
           `<div>
-             <div>${questionNumber+1}</div>
+             <div style="color:lightgreen">Q. ${questionNumber+1}</div>
              <div class="question"> <img src="./iamges/${currentQuestion.icon}.png"> </div>
              <div class="answers" style="color:lightgreen"> 解答: ${userAnswer} / 正解: ${currentQuestion.name} </div>
            </div>`
@@ -79,7 +79,7 @@ $(window).on('load', function() {
         
         output.push(
           `<div>
-             <div>${questionNumber+1}</div>
+             <div style="color:red">Q. ${questionNumber+1}</div>
              <div class="question"> <img src="./iamges/${currentQuestion.icon}.png"> </div>
              <div class="answers" style="color:red"> 解答: ${userAnswer} / 正解: ${currentQuestion.name} </div>
            </div>`
