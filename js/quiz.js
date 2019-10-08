@@ -83,9 +83,9 @@ window.onload = function() {
         
         output.push(
           `<div>
-             <div>${questionNumber+1} / ${myQuestions.length}</div>
+             <div>${questionNumber+1}</div>
              <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
-             <div class="answers" style="color:lightgreen"> userAnswer </div>
+             <div class="answers" style="color:lightgreen"> 解答: ${userAnswer} / 正解: ${currentQuestion.correctAnswer} </div>
            </div>`
         );
       } else {
@@ -95,9 +95,9 @@ window.onload = function() {
         
         output.push(
           `<div>
-             <div>${questionNumber+1} / ${myQuestions.length}</div>
+             <div>${questionNumber+1}</div>
              <div class="question"> <img src="https://raw.githubusercontent.com/vprjct/test/master/iamges/${currentQuestion.question}.png"> </div>
-             <div class="answers" style="color:red"> userAnswer </div>
+             <div class="answers" style="color:red"> 解答: ${userAnswer} / 正解: ${currentQuestion.correctAnswer} </div>
            </div>`
         );
       }
@@ -109,7 +109,7 @@ window.onload = function() {
     submitButton.style.display = "none";
     
     // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    output.push(`<div>正解数 : ${numCorrect} / ${myQuestions.length}</div>`);
     resultsContainer.innerHTML = output.join("");
   }
 
