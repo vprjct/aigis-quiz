@@ -148,4 +148,5 @@ $(window).on('load', function() {
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
+  retryButton.addEventListener("click", location.reload());
 });
