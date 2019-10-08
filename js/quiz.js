@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(window).on('load', function() {
   const origList = [
     {
       "icon": "icon_001s",
@@ -24,7 +24,7 @@ $(window).load(function() {
       "icon": "icon_006s",
       "name": "月読調"
     }
-];
+  ];
   
   const shuffle = ([...arr]) => {
     let m = arr.length;
